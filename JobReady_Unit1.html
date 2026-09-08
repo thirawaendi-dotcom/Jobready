@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JobReady — Unit 1</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f7f8fc;color:#20253a}
+header{background:#fff;border-bottom:1px solid #e8eaf2;position:sticky;top:0;z-index:5}
+.nav{max-width:1050px;margin:auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:800}.logo span{font-size:13px;font-weight:500;color:#777}
+.progress{font-size:13px;color:#68708a}
+.hero{background:#eef0ff;padding:52px 22px}
+.hero-inner{max-width:1050px;margin:auto}
+.badge{display:inline-block;background:#fff;padding:7px 12px;border-radius:20px;font-size:13px;font-weight:700}
+h1{font-size:42px;margin:18px 0 10px} h2{font-size:28px;margin-top:0}
+.hero p{max-width:700px;font-size:17px;line-height:1.6;color:#555}
+.container{max-width:1050px;margin:35px auto;padding:0 22px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid #e5e7ef;border-radius:18px;padding:24px;box-shadow:0 5px 18px rgba(30,35,60,.05)}
+.num{width:36px;height:36px;border-radius:50%;background:#20253a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.card h3{margin:16px 0 8px}.card p{color:#666;line-height:1.5}.btn{border:0;border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer;background:#20253a;color:white}
+section{margin:55px 0}.lesson{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start}
+.panel{background:#fff;border-radius:18px;border:1px solid #e5e7ef;padding:25px}
+ul{line-height:1.9;color:#555}
+.quiz label{display:block;padding:12px;margin:8px 0;background:#f5f6fa;border-radius:10px;cursor:pointer}
+input[type=text]{width:100%;padding:13px;border:1px solid #d8dbe6;border-radius:10px;margin:8px 0 14px}
+.result{margin-top:15px;font-weight:700}
+.job{border-left:5px solid #20253a;padding:16px 20px;background:#f8f9fc;border-radius:10px;line-height:1.7}
+.mistake{background:#fff5e8;border:1px solid #f2d8ad}
+footer{text-align:center;padding:35px;color:#777;font-size:13px}
+@media(max-width:750px){h1{font-size:32px}.cards,.lesson{grid-template-columns:1fr}.nav{gap:15px}.progress{display:none}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">JobReady <span>• English for Job Hunting</span></div><div class="progress">Unit 1 of 4</div></div></header>
+
+<div class="hero"><div class="hero-inner">
+<span class="badge">UNIT 1 · RESEARCH & PREPARATION</span>
+<h1>Know yourself. Find the right job.</h1>
+<p>Before writing your CV or going to an interview, learn how to identify your strengths, understand a job advertisement, and decide whether a job is right for you.</p>
+</div></div>
+
+<div class="container">
+<section>
+<h2>What will you learn?</h2>
+<div class="cards">
+<div class="card"><div class="num">1</div><h3>Know Yourself</h3><p>Identify your strengths, skills, interests, experience, and career goals.</p><button class="btn" onclick="scrollToId('self')">Start</button></div>
+<div class="card"><div class="num">2</div><h3>Read a Job Ad</h3><p>Find responsibilities, qualifications, skills, and language requirements.</p><button class="btn" onclick="scrollToId('jobad')">Explore</button></div>
+<div class="card"><div class="num">3</div><h3>Find Your Match</h3><p>Compare your profile with a job and identify your skill gaps.</p><button class="btn" onclick="scrollToId('match')">Try it</button></div>
+</div>
+</section>
+
+<section id="self"><h2>1. Know Yourself</h2><div class="lesson">
+<div class="panel"><h3>Before you apply, ask yourself:</h3><ul>
+<li>What am I good at?</li><li>What skills have I developed?</li><li>What experience can I show?</li><li>What type of work interests me?</li><li>What are my career goals?</li>
+</ul><p><b>Remember:</b> University projects, internships, part-time jobs, volunteering, and activities can all provide useful evidence of your skills.</p></div>
+<div class="panel quiz"><h3>Quick Self-Check</h3><p>Which one is the strongest way to describe a skill?</p>
+<label><input type="radio" name="q1" value="a"> I am a good team player.</label>
+<label><input type="radio" name="q1" value="b"> I worked with five classmates to complete a research project and present our findings.</label>
+<label><input type="radio" name="q1" value="c"> I am very hardworking.</label>
+<button class="btn" onclick="check('q1','b','r1')">Check answer</button><div id="r1" class="result"></div>
+</div></div></section>
+
+<section id="jobad"><h2>2. Read the Job Advertisement</h2><div class="lesson">
+<div class="panel"><h3>Customer Service Assistant</h3><div class="job">
+<b>Responsibilities</b><br>• Assist customers and answer questions<br>• Handle basic customer requests<br>• Work with the team to solve problems<br><br>
+<b>Requirements</b><br>• Bachelor's degree or current university student<br>• Good communication and teamwork skills<br>• English communication skills<br>• Customer service experience is preferred
+</div></div>
+<div class="panel quiz"><h3>Can you spot the requirements?</h3><p>Which skill is explicitly required?</p>
+<label><input type="radio" name="q2" value="a"> Graphic design</label>
+<label><input type="radio" name="q2" value="b"> English communication</label>
+<label><input type="radio" name="q2" value="c"> Programming</label>
+<button class="btn" onclick="check('q2','b','r2')">Check answer</button><div id="r2" class="result"></div>
+</div></div></section>
+
+<section id="match"><h2>3. Find Your Best Job Match</h2><div class="panel">
+<p><b>Imagine you are applying for the Customer Service Assistant position.</b></p>
+<p>Select the experiences you have. The activity will show which requirements you already have evidence for.</p>
+<label><input type="checkbox" class="skill" value="communication"> I have experience communicating with customers or other people.</label>
+<label><input type="checkbox" class="skill" value="teamwork"> I have worked successfully in a team.</label>
+<label><input type="checkbox" class="skill" value="english"> I can communicate in English.</label>
+<label><input type="checkbox" class="skill" value="customer"> I have customer service experience.</label>
+<br><button class="btn" onclick="matchJob()">See my match</button>
+<div id="matchResult" class="result"></div>
+</div></section>
+
+<section><h2>🚨 Don't Make This Mistake</h2><div class="panel mistake">
+<h3>“I’ll apply first and read the job description later.”</h3>
+<p>Job seekers often apply because the job title looks interesting. But if you do not understand the requirements, you may miss important information or fail to show relevant skills in your CV and interview.</p>
+<p><b>Better approach:</b> Read the job ad → highlight requirements → compare them with your skills → decide what evidence to show.</p>
+</div></section>
+
+<section><div class="panel" style="text-align:center">
+<h2>🎯 Unit 1 Challenge</h2>
+<p>Choose a real job advertisement you are interested in. Write down <b>3 requirements</b> and <b>one piece of evidence</b> from your own experience for each requirement.</p>
+<button class="btn" onclick="alert('Great! Save your answers — you can use them later when writing your CV and Cover Letter.')">Complete Challenge</button>
+</div></section>
+</div>
+
+<footer>JobReady · Unit 1: Research & Preparation</footer>
+
+<script>
+function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+function check(name,answer,resultId){
+ const selected=document.querySelector('input[name="'+name+'"]:checked');
+ const el=document.getElementById(resultId);
+ if(!selected){el.textContent='Please choose an answer.';return}
+ el.textContent=selected.value===answer?'✅ Correct! This answer gives specific evidence.':'❌ Not quite. Look for the answer that gives specific evidence.';
+}
+function matchJob(){
+ const vals=[...document.querySelectorAll('.skill:checked')].map(x=>x.value);
+ const el=document.getElementById('matchResult');
+ if(vals.length===0){el.textContent='Select at least one experience first.';return}
+ const score=vals.length;
+ let msg=score>=3?'🌟 Strong match! You already have several relevant skills.':score===2?'👍 Good start! You have some relevant skills.':'💡 You have a starting point. Identify ways to build more relevant experience.';
+ el.textContent=msg+' Matched areas: '+score+'/4.';
+}
+</script>
+</body>
+</html>
